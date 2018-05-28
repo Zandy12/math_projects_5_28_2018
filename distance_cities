@@ -1,0 +1,113 @@
+''' Distance Between Two Cities - Calculates the distance between two
+cities and allows the user to specify a unit of distance. This program
+may require finding coordinates for the cities like latitude and
+longitude.
+'''
+
+#Figure out how to calculate with indexes inside of indexes
+
+first = [41.8781,-87.6298] #Chicago
+second = [34.0522,-118.2437] #Los Angeles
+third = [40.7128,-74.0060] #New York
+fourth = [25.7617,-80.1918] #Miami
+fifth = [33.7490,-84.3880] #Atlanta
+sixth = [47.6062,-122.3321] #Seattle
+seventh = [42.3601,-71.0589] #Boston
+eighth = [33.4484,-112.0740] #Phoenix
+ninth = [29.7604,-95.3698] #Houston
+tenth = [61.2181,-149.9003] #Anchorage
+
+Quit = False
+
+while not Quit:
+
+    places = []
+    
+    question = str(input('Which city would you like to start from? '))
+    print('You have chosen',question,'as your starting point! ')
+    if question == ('Chicago'):
+        places.append(first)
+        print(places)
+    if question == ('Los Angeles'):
+        places.append(second)
+        print(places)
+    if question == ('New York'):
+        places.append(third)
+        print(places)
+    if question == ('Miami'):
+        places.append(fourth)
+        print(places)
+    if question == ('Atlanta'):
+        places.append(fifth)
+        print(places)
+    if question == ('Seattle'):
+        places.append(sixth)
+        print(places)
+    if question == ('Boston'):
+        places.append(seventh)
+        print(places)
+    if question == ('Phoenix'):
+        places.append(eighth)
+        print(places)
+    if question == ('Houston'):
+        places.append(ninth)
+        print(places)
+    if question == ('Anchorage'):
+        places.append(tenth)
+        print(places)
+        
+    seconds = input('Which city would like to know the distance from your chosen place?')
+    print('You have chosen',second,'as your destination! ')
+    if seconds == ('Chicago'):
+        places.append(first)
+        print(places)
+        d = (abs((((places[1][0]-places[0][0])**2 - (places[1][1]-places[0][1])**2)**1/2)*10))
+        print('Your total distance from',question,'to',seconds,'is',d,'miles!')
+    if seconds == ('Los Angeles'):
+        places.append(second)
+        print(places)
+        d = (abs((((places[1][0]-places[0][0])**2 - (places[1][1]-places[0][1])**2)**1/2)*10))
+        print('Your total distance from',question,'to',seconds,'is',d,'miles!')
+    if seconds == ('New York'):
+        places.append(third)
+        print(places)
+        d = (abs((((places[1][0]-places[0][0])**2 - (places[1][1]-places[0][1])**2)**1/2)*10))
+        print('Your total distance from',question,'to',seconds,'is',d,'miles!')
+    if seconds == ('Miami'):
+        places.append(fourth)
+        print(places)
+        d = (abs((((places[1][0]-places[0][0])**2 - (places[1][1]-places[0][1])**2)**1/2)*10))
+        print('Your total distance from',question,'to',seconds,'is',d,'miles!')
+    if seconds == ('Atlanta'):
+        places.append(fifth)
+        print(places)
+        d = (abs((((places[1][0]-places[0][0])**2 - (places[1][1]-places[0][1])**2)**1/2)*10))
+        print('Your total distance from',question,'to',seconds,'is',d,'miles!')
+    if seconds == ('Seattle'):
+        places.append(sixth)
+        print(places)
+        d = (abs((((places[1][0]-places[0][0])**2 - (places[1][1]-places[0][1])**2)**1/2)*10))
+        print('Your total distance from',question,'to',seconds,'is',d,'miles!')
+    if seconds == ('Boston'):
+        places.append(seventh)
+        print(places)
+        d = (abs((((places[1][0]-places[0][0])**2 - (places[1][1]-places[0][1])**2)**1/2)*10))
+        print('Your total distance from',question,'to',seconds,'is',d,'miles!')
+    if seconds == ('Phoenix'):
+        places.append(eighth)
+        print(places)
+        d = (abs((((places[1][0]-places[0][0])**2 - (places[1][1]-places[0][1])**2)**1/2)*10))
+        print('Your total distance from',question,'to',seconds,'is',d,'miles!')
+    if seconds == ('Houston'):
+        places.append(ninth)
+        print(places)
+        d = (abs((((places[1][0]-places[0][0])**2 - (places[1][1]-places[0][1])**2)**1/2)*10))
+        print('Your total distance from',question,'to',seconds,'is',d,'miles!')
+    if seconds == ('Anchorage'):
+        places.append(tenth)
+        print(places)
+        d = (abs((((places[1][0]-places[0][0])**2 - (places[1][1]-places[0][1])**2)**1/2)*10))
+        print('Your total distance from',question,'to',seconds,'is',d,'miles!')
+
+
+# Needed nested lists to work out distance formula with appended data.
