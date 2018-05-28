@@ -1,0 +1,65 @@
+'''
+Complex Number Algebra - Show addition, multiplication, negation, and
+inversion of complex numbers in separate functions. (Subtraction and
+division operations can be made with pairs of these operations.) Print
+the results for each operation tested.
+'''
+
+import numpy
+from fractions import Fraction
+
+# 1j == imaginary number
+
+def add_complex(a,b):
+
+    c = a + b
+    print(c)
+
+def subtract_complex(a,b):
+
+    c = a - b
+    print(c)
+
+def multiply_complex(a,b):
+
+    c = a * b
+    print(c)
+
+def divide_complex(a,b):
+
+    c = numpy.conjugate(b)
+    d = (a*c)
+    e = (b*c)
+    f = (d/e)
+    print(f)
+
+def negation_complex(a):
+
+    b = a * (-1)
+    print(b)
+
+def inversion_complex(a):
+    
+    if a == 0:
+        print('You cannot have a zero in the denominator!')
+    else:
+        #c = (1/a).as_integer_ratio()  --> way of seeing floating numbers as improper fractions in Python
+        #c = 1/a
+        b = numpy.conjugate(a)
+        c = (1*b)
+        d = (a*b)
+        e = (c/d)
+        print(e)
+
+print('Addition:')
+add_complex(3+1j,5+1j)
+print('Subtraction:')
+subtract_complex(3+1j,5+1j)
+print('Multiplication:')
+multiply_complex(3+1j,5+1j)
+print('Division:')
+divide_complex(5+1j,3+1j)
+print('Inversion:')
+inversion_complex(3+1j)
+print('Negation:')
+negation_complex(3+1j)
