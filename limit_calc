@@ -1,0 +1,24 @@
+'''Limit Calculator - Ask the user to enter f(x) and the limit value, then
+return the value of the limit statement Optional: Make the calculator
+capable of supporting infinite limits.'''
+
+#Change the value of x to the value of the second argument in the lim_calculator
+#function
+
+import math
+
+def lim_calculator(function):
+    global x
+    #global y
+
+    print('The limit as x approaches',x,'is',function)
+        
+
+
+#lim_calculator(1/x+2, -2) --> the limit as x approaches -2 of 1/x+2 is
+#0 from above
+
+
+print('Welcome to the Limit Calculator!')
+x = 3
+lim_calculator(3*x+2)
